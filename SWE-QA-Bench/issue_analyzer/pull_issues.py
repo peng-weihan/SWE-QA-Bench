@@ -8,22 +8,22 @@ import threading
 # ====== Configuration Section ======
 # Repository list, each element is (owner, repo)
 repos = [
-    # ("pallets", "flask"),
-    # ("psf", "requests"),
-    # ("django", "django"),
-    # ("sqlfluff", "sqlfluff"),
-    # ("pytest-dev", "pytest"),
-    # ("sphinx-doc", "sphinx"),
-    # ("astropy", "astropy"),
-    # ("scikit-learn", "scikit-learn"),
+    ("pallets", "flask"),
+    ("psf", "requests"),
+    ("django", "django"),
+    ("sqlfluff", "sqlfluff"),
+    ("pytest-dev", "pytest"),
+    ("sphinx-doc", "sphinx"),
+    ("astropy", "astropy"),
+    ("scikit-learn", "scikit-learn"),
     ("matplotlib", "matplotlib"),
     ("sympy", "sympy"),
     ("pydata","xarray"),
     ("PyCQA", "pylint"),
 ]
-
-token = ""   # ⚠️ Required
-output_dir = "./issues/datasets"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+token = os.getenv("GITHUB_TOKEN")
+output_dir = PROJECT_ROOT / "datasets" / "issues"
 MAX_WORKERS = 4  # Number of repositories to process in parallel
 
 # Create output directory if it doesn't exist

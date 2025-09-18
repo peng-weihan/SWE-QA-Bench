@@ -1,7 +1,5 @@
 import json
 import os
-import random
-import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI
 from pathlib import Path
@@ -11,12 +9,8 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 # 获取项目根目录（SWE-QA/SWE-QA）
-PROJECT_ROOT = Path(__file__).parent.parent.parent
-QUESTIONS_DIR = PROJECT_ROOT / "datasets" / "questions"
-ANSWERS_DIR = PROJECT_ROOT / "datasets" / "answers" / "direct"
-# 确保目录存在
-QUESTIONS_DIR.mkdir(parents=True, exist_ok=True)
-ANSWERS_DIR.mkdir(parents=True, exist_ok=True)
+
+
 
 # Configuration from environment variables
 REPO_MAX_WORKERS = int(os.getenv("REPO_MAX_WORKERS", "1"))
@@ -25,7 +19,13 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
 MODEL = os.getenv("MODEL", "gpt-4o")
 TEMPERATURE = float(os.getenv("TEMPERATURE", "0"))
+PROJECT_ROOT = Path(__file__).parent.parent.parent
+QUESTIONS_DIR = PROJECT_ROOT / "datasets" / "questions"
+ANSWERS_DIR = PROJECT_ROOT / "datasets" / "answers" / MODEL /"direct"
 
+# 确保目录存在
+QUESTIONS_DIR.mkdir(parents=True, exist_ok=True)
+ANSWERS_DIR.mkdir(parents=True, exist_ok=True)
 # Validate required environment variables
 if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY environment variable is required")

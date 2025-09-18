@@ -5,7 +5,6 @@ import json
 from typing import List, Dict
 import numpy as np
 from tqdm import tqdm
-import requests
 from dotenv import load_dotenv
 import faiss
 import pickle

@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import openai
 import json
 import concurrent.futures
@@ -6,11 +7,11 @@ from typing import Dict, Any, Optional
 
 from dotenv import load_dotenv
 load_dotenv()
-api_key = os.getenv("AIHUBMIX_API_KEY")
+PROJECT_ROOT = Path(__file__).parent.parent.parent
 
 from openai import OpenAI
 
-client = OpenAI(api_key=api_key, base_url="https://aihubmix.com/v1")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"), base_url=os.getenv("OPENAI_BASE_URL"))
 
 def score_answer(question, reference, candidate):
     # ... existing code ...
@@ -65,7 +66,7 @@ No explanation, no extra text, no formatting other than valid JSON"""
 
     try:
         response = client.chat.completions.create(
-            model="DeepSeek-V3",
+            model=os.getenv("MODEL"),
             messages=[
             {"role": "system", "content": "You are a helpful assistant"},
             {"role": "user", "content": prompt},
@@ -215,11 +216,10 @@ if __name__ == "__main__":
         'sympy',
         'xarray',
     ]
-    
     # Set paths
-    candidate_base_path = "./answer/claude-sonnet-3-7/cursor"
-    reference_base_path = "./answer/aggregated"
-    output_base_path = "./answer/score/llm-as-a-judge/claude-sonnet-3-7/cursor"
+    candidate_base_path = PROJECT_ROOT / "datasets" / "answers" / os.getenv("MODEL") / os.getenv("METHOD")
+    reference_base_path = PROJECT_ROOT / "datasets" / "reference"
+    output_base_path = PROJECT_ROOT / "datasets" / "scores" / os.getenv("MODEL") / os.getenv("METHOD")
     
     for repo in repos:
         candidate_path = f"{candidate_base_path}/{repo}.jsonl"
@@ -238,7 +238,6 @@ if __name__ == "__main__":
         if not os.path.exists(reference_path):
             print(f"Skipping {repo}: Reference answer file does not exist")
             continue
-            
         # Use parallel processing
         evaluate_jsonl_parallel(candidate_path, reference_path, output_path, max_workers=16)
         print(f"Completed processing {repo}")

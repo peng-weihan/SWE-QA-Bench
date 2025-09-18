@@ -3,24 +3,10 @@ import time
 import threading
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dotenv import load_dotenv
 from litellm import OpenAI
 
-# ====== Configuration Section ======
-
-# ====== API Configuration ======
-API_BASE_URL = "https://aihubmix.com/v1"
-API_KEY = "sk-LWnmiSBkrZp9kuVw18BdFaAf201d41D69629Fb16Aa66623f"  # ⚠️ Required
-MODEL_NAME = "DeepSeek-V3"
-TEMPERATURE = 0  # LLM temperature parameter
-
-# ====== Concurrency Control Configuration ======
-REPO_CONCURRENCY = 1  # Repository concurrency count
-MAX_WORKERS_PER_REPO = 64  # Maximum threads per repository
-MAX_ISSUES_PER_REPO = 50000  # Maximum issues to process per repository
-
-# ====== Filtering Criteria Configuration ======
-MIN_BODY_LENGTH = 1000  # Minimum body character count, issues shorter than this will be skipped
-
+load_dotenv()
 # ====== Question Classification Tags ======
 TAGS = {
     "What": ["Architecture exploration", "Concept / Definition", "Dependency tracing"],
@@ -31,19 +17,33 @@ TAGS = {
 
 # ====== Repository Configuration ======
 # Multi-repository configuration - can add more repositories
-REPOSITORIES = [
-    {
-        "name": "Flask",
-        "input_json": "./issues/datasets/flask.json",
-        "output_json": "./issues/datasets/questions/flask.json"
-    },
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO = [
+    "flask",
+    "requests",
+    "django",
+    "sqlfluff",
+    "pytest",
+    "sphinx",
+    "astropy",
+    "scikit-learn",
+    "matplotlib",
+    "sympy",
+    "xarray",
+    "pylint",
 ]
-    # Can continue adding more repositories...
+REPOSITORIES = []
+for repo in REPO:
+    REPOSITORIES.append({
+        "name": repo,
+        "input_json": PROJECT_ROOT / "datasets" / "issues" / f"{repo}.json",
+        "output_json": PROJECT_ROOT / "datasets" / "issue_questions" / f"{repo}.json"
+    })
 
 # ====== Initialize Client ======
 client = OpenAI(
-    base_url=API_BASE_URL,
-    api_key=API_KEY,
+    base_url=os.getenv("API_BASE_URL"),
+    api_key=os.getenv("API_KEY"),
 )
 
 # File lock for thread-safe writing
@@ -100,7 +100,7 @@ def process_single_issue(issue, repository_name):
     body = issue.get("body", "")
     
     # Filter condition: issues with body too short
-    if len(body.strip()) < MIN_BODY_LENGTH:  # Skip issues with body shorter than specified character count
+    if len(body.strip()) < os.getenv("MIN_BODY_LENGTH"):  # Skip issues with body shorter than specified character count
         return None
     
     if not body.strip() and not title.strip():
@@ -139,9 +139,9 @@ Output JSON format:
 """
     try:
         response = client.chat.completions.create(
-            model=MODEL_NAME,
+            model=os.getenv("API_MODEL"),
             messages=[{"role": "user", "content": prompt}],
-            temperature=TEMPERATURE
+            temperature=os.getenv("TEMPERATURE")
         )
         text = response.choices[0].message.content.strip()
         text = clean_markdown_json(text)
@@ -194,7 +194,7 @@ def process_single_repository(repo_config):
         json.dump([], f, ensure_ascii=False, indent=2)
     
     # Filter issues to process
-    issues_to_process = issues[:MAX_ISSUES_PER_REPO]
+    issues_to_process = issues[:os.getenv("MAX_ISSUES_PER_REPO")]
     
     # Count filtered issues
     filtered_count = 0
@@ -205,7 +205,7 @@ def process_single_repository(repo_config):
         
         body = issue.get("body", "")
         # Filter condition: issues with body too short
-        if len(body.strip()) < MIN_BODY_LENGTH:
+        if len(body.strip()) < os.getenv("MIN_BODY_LENGTH"):
             continue
         
         if not body.strip() and not issue.get("title", "").strip():
@@ -216,13 +216,13 @@ def process_single_repository(repo_config):
     with stats_lock:
         print(f"📊 {repo_name} original issues: {len(issues_to_process)}")
         print(f"📊 {repo_name} remaining after filtering: {filtered_count} (filtered out {len(issues_to_process) - filtered_count} issues)")
-        print(f"🚀 Starting parallel processing of {filtered_count} issues using {MAX_WORKERS_PER_REPO} threads")
+        print(f"🚀 Starting parallel processing of {filtered_count} issues using {os.getenv("MAX_WORKERS_PER_REPO")} threads")
     
     # Parallel processing
     completed_count = 0
     repo_questions = 0
     
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS_PER_REPO) as executor:
+    with ThreadPoolExecutor(max_workers=os.getenv("MAX_WORKERS_PER_REPO")) as executor:
         future_to_issue = {executor.submit(process_single_issue, issue, repo_name): issue for issue in issues_to_process}
         for future in as_completed(future_to_issue):
             issue = future_to_issue[future]
@@ -367,17 +367,17 @@ def main():
     print("🚀 Starting batch processing of multiple repository issues (concurrent mode)")
     print(f"📋 Repository list to process: {[repo['name'] for repo in REPOSITORIES]}")
     print(f"⚙️  Configuration:")
-    print(f"  - Repository concurrency: {REPO_CONCURRENCY}")
-    print(f"  - Max threads per repository: {MAX_WORKERS_PER_REPO}")
-    print(f"  - Max issues per repository: {MAX_ISSUES_PER_REPO}")
-    print(f"  - Minimum body length: {MIN_BODY_LENGTH}")
-    print(f"  - LLM model: {MODEL_NAME}")
-    print(f"  - LLM temperature: {TEMPERATURE}")
+    print(f"  - Repository concurrency: {os.getenv("REPO_CONCURRENCY")}")
+    print(f"  - Max threads per repository: {os.getenv("MAX_WORKERS_PER_REPO")}")
+    print(f"  - Max issues per repository: {os.getenv("MAX_ISSUES_PER_REPO")}")
+    print(f"  - Minimum body length: {os.getenv("MIN_BODY_LENGTH")}")
+    print(f"  - LLM model: {os.getenv("API_MODEL")}")
+    print(f"  - LLM temperature: {os.getenv("TEMPERATURE")}")
     
     global_stats["total_repos"] = len(REPOSITORIES)
     
     # Concurrent processing of multiple repositories
-    repo_concurrency = min(len(REPOSITORIES), REPO_CONCURRENCY)  # Limit repository concurrency to avoid excessive resource consumption
+    repo_concurrency = min(len(REPOSITORIES), os.getenv("REPO_CONCURRENCY"))  # Limit repository concurrency to avoid excessive resource consumption
     
     with ThreadPoolExecutor(max_workers=repo_concurrency) as executor:
         # Submit all repository processing tasks

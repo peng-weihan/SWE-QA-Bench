@@ -1,7 +1,5 @@
 # Top ten repositories
 import os
-import sys
-
 from openai import OpenAI
 from tqdm import tqdm
 import ast

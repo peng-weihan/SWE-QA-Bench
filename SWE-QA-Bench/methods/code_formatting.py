@@ -17,8 +17,6 @@ CODE_INSTRUCTION = """
 These are the code snippets that are potentially related to the question, please answer your question based on the following retrieved code information.
 """
 
-
-
 ground_truth_field_prompt = (
     "\\nInclude supporting evidence only if strictly necessary (e.g., short relevant code snippets)."
     "\\nPlace all evidence, including code snippets or repository-specific knowledge, into this field."
