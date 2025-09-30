@@ -29,7 +29,7 @@ multidict==6.6.4
 numpy==2.3.3
 openai==1.108.0
 orjson==3.11.3
-packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1745345660/work
+packaging==25.0
 pillow==11.3.0
 propcache==0.3.2
 pydantic==2.11.9
