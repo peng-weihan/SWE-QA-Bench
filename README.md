@@ -48,8 +48,9 @@ SWE-QA-Bench/
 │   └── README.md
 ├── LICENSE                    # License file
 ├── supplementary.pdf          # Supplementary file (prompts)
-├── clone_repos.sh              # Script to clone repositories at specific commits
-├── repos.txt                   # List of repository URLs and commit hashes
+├── clone_repos.sh             # Script to clone repositories at specific commits
+├── repos.txt                  # List of repository URLs and commit hashes
+├── requirements.txt           # Python dependencies required to run the project
 └── README.md                  # This file
 ```
 
