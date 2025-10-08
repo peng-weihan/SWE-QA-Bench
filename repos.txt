@@ -1,0 +1,12 @@
+https://github.com/astropy/astropy 8f2535d
+https://github.com/django/django 500bd42
+https://github.com/pallets/flask 85c5d93
+https://github.com/matplotlib/matplotlib 1b1290f
+https://github.com/pylint-dev/pylint 707323a
+https://github.com/pytest-dev/pytest 1b1375f
+https://github.com/psf/requests b3f7e3d
+https://github.com/scikit-learn/scikit-learn 3d35e02
+https://github.com/sphinx-doc/sphinx c780dc4
+https://github.com/sqlfluff/sqlfluff 00ed309
+https://github.com/sympy/sympy 3c817ed
+https://github.com/pydata/xarray 9afc1b1

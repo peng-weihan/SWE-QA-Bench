@@ -48,6 +48,8 @@ SWE-QA-Bench/
 │   └── README.md
 ├── LICENSE                    # License file
 ├── supplementary.pdf          # Supplementary file (prompts)
+├── clone_repos.sh              # Script to clone repositories at specific commits
+├── repos.txt                   # List of repository URLs and commit hashes
 └── README.md                  # This file
 ```
 
@@ -66,13 +68,11 @@ SWE-QA-Bench/
    ```bash
    pip install -r requirements.txt
    ```
+   
 **SWE Repository Prerequisites:**
    ```bash
-   cd SWE-QA-Bench/datasets/repos
-   # Note: You can also clone only the repositories you want to experiment with
-   git clone https://github.com/astropy/astropy
-   git clone https://github.com/django/django
-   ...
+   # Use the provided script to clone all repositories at specific commits
+   ./clone_repos.sh
    ```
 
 ## ⚡ Quick Start
