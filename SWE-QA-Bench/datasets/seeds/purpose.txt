@@ -1,0 +1,25 @@
+What is the purpose of <Function> and how should it be renamed to accurately reflect its functionality?
+What is the purpose of the <Module> module in the system?
+What is the purpose of the <Module> module?
+What is the purpose of the <Class> class in the codebase?
+What is the purpose and functionality of the <Class> class?
+What is the purpose of the <Class> class in the overall design?
+What is the purpose of the <Function> function in the codebase?
+What is the intended functionality of the <Function> function?
+What is the purpose of the <Function> function?
+What is the intended purpose or outcome of the <Function> function?
+What is the purpose of the <Function> function?
+What is the purpose of the <Function> function in the system?
+What is the purpose and significance of the <Function> function in this application?
+What is the specific purpose and role of the <Function> function in data processing or control flow?
+What are the specific consequences of removing or disabling the <Function> function from the application?
+What is the purpose of the <Function> function?
+What is the primary responsibility of the <Function> function in the <Module> module?
+What is the purpose of the <Function> function in a transaction or business logic pipeline?
+What is the specific role of <Class>/<Component> in delivering the functionality of <Feature>?
+What is the purpose of the <Module> module in the context of <Feature>?
+What is the responsibility of the <Method> method in the <Class> class?
+What is the specific purpose and functionality of the <Parameter> parameter in the <Function> function?
+What is the purpose of the <Variable> member variable in the <Class> class?
+What is the purpose of the <Method> method in the <Class> class?
+What is the purpose of the code snippet and what would be the impact of removing or modifying it?

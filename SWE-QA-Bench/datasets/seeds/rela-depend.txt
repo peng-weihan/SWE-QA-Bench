@@ -1,0 +1,100 @@
+How to identify and eliminate unnecessary dependencies in <Class> implementation?
+What are the communication mechanisms between <Module> and other modules?
+How do classes within a module coordinate and interact to implement the module's functionality?
+How do the functions within <Class> interact and coordinate to implement the class's overall functionality?
+How do <Class> and <Function> interact and collaborate in the codebase?
+How does <Module> communicate with external APIs?
+What communication protocol (e.g., REST, gRPC, message queue) is used for interactions between <Module> and external APIs?
+Which classes does <Class> delegate control to in its implementation?
+What are the dataflow dependencies between <Class> and other utility or service classes?
+What data dependencies are introduced by <Function>?
+What specific services does the <Module> module provide to other components in the system?
+What services does the <Class> class provide to other components in the system?
+What are the dependencies and required context for the <Class> class to function correctly?
+What are the specific changes in system state or behavior after calling the <Function> function?
+What are the dependencies of the <Module> module?
+What are the external dependencies of the <Module> module?
+What are the internal dependencies of the <Module> module?
+What system resources or hardware dependencies does the <Module> module require?
+Which modules have dependencies on the <Module> module?
+Which modules have dependencies on or are affected by changes to the <Module> module?
+Identify which downstream modules have dependencies on the <Module> module.
+Which modules have dependencies on specific features or functionalities of the <Module> module?
+What is the relationship and dependency between the <Module> module and database transactions?
+Which modules have dependencies on the <Module> module and would be affected by changes to it?
+What are the dependencies and impacts of updating the <Module> module on other modules?
+What are the dependencies of the <Class> class?
+What are the dependencies and external modules that the <Class> class requires to function properly?
+What external dependencies are required for the <Class> class to function properly?
+What configuration settings or parameters does the <Class> class require or depend on?
+What are the base classes and mixins that the <Class> class inherits from?
+What are the required services and data dependencies for the <Class> class to function correctly?
+What utility functions or helper classes are required by the <Class> class?
+What classes have dependencies on the <Class> class?
+What are the subclasses or derived types that inherit from the <Class> class?
+Which test cases or fixtures have tight coupling dependencies with the <Class> class?
+What components or modules have dependencies on the <Class> class and would be affected by its removal or refactoring?
+What is the relationship between a specific class and individual models in the computation of a particular matrix?
+How does the <Class> class interact with the database model or ORM layer in terms of dependencies and relationships?
+How does the <Class> class manage state through its methods?
+What is the relationship between the <Class> class and configuration or environment settings?
+What is the relationship between the <Class> class and UI generation components in the codebase?
+How does the <Class> class interact with serializers, validators, and adapters in the codebase?
+What are the logical and functional relationships between different attributes and methods within the <Class> class?
+Which classes or modules have dependencies on the <Class> class?
+What are the potential cascading effects and dependencies when modifying a method in the <Class> class?
+Which downstream services or components have dependencies on the <Class> class and would be affected by incorrect modifications?
+What utility functions does <Function> depend on?
+What are the input parameters and external dependencies of the <Function> function?
+What global state or configuration dependencies does the <Function> function have?
+What external modules or libraries are required by the <Function> function?
+What are the dependencies and environmental requirements for the <Function> function to execute successfully?
+What tests, hooks, or signals are triggered by or bound to the <Function> function?
+Identify which templates, endpoints, or routes have dependencies on the <Function> function.
+What system features or behaviors would be impacted if the <Function> function is modified or removed?
+How does the <Function> function interact with global variables within the module?
+What is the relationship between the <Function> function and error-handling or logging mechanisms?
+What is the relationship between the <Function> function and form submission or request-handling processes?
+How does the <Function> function interact with decorators, hooks, or middleware in terms of execution flow and dependencies?
+Which functions or components would be affected by a change to the signature of the <Function> function?
+What downstream behaviors are affected by logic changes in the <Function> function?
+What test cases and documentation are dependent on the <Function> function and require updates when it changes?
+What are the dependencies and impacts of replacing or deprecating the <Function> function?
+What is the relationship and dependency between the <Module> module and the <Class> class?
+What is the relationship and dependency between the <Module> module and the <Function> function?
+What is the interaction mechanism between the <Function> function and the <Class> class?
+What are effective techniques to identify and eliminate hidden coupling between <ComponentA> and <ComponentB> in <Module>?
+How to design an interface to decouple ModuleA and ModuleB by reducing their direct dependency?
+How do <FunctionA> and <FunctionB> coordinate to implement <Feature>?
+How do multiple functions within a module coordinate and interact to implement a specific feature?
+How do <Function> and <Function> interact to implement <Feature>?
+How do public and private functions within a class interact to implement a specific feature?
+How does the <Function> method within <Class> interact with other methods to implement <Feature>?
+How do <ClassA> and <ClassB> within <Module> collaborate to implement <Feature>?
+How do plugin modules interact with and extend the core <Module> to implement <Feature> functionality?
+How do <ModuleA> and <ModuleB> coordinate to implement cross-cutting <Feature>?
+How does <Module> interact with other modules to implement <Feature>?
+How does the orchestration module coordinate with worker modules to execute a specific feature?
+How do feature-specific modules interact to deliver end-to-end functionality in a software system?
+What are the architectural principles that define the interaction between ModuleA and ModuleB?
+How do <ComponentA> and <ComponentB> coordinate and interact with each other?
+What contracts or protocols define the interaction between <ComponentA> and <ComponentB>?
+What interaction model (e.g., event-driven, request-response) is implemented between ComponentA and ComponentB?
+Which modules collaborate to implement <Feature> in this system?
+What monitoring and autoscaling tools are compatible with <Component>?
+What is the relationship and dependency between the <Module> module and the <OtherModule> module?
+What is the relationship and dependency between the <Class> class and the <OtherClass> class?
+What external variables or constants does the provided code snippet depend on?
+What configuration settings or environment variables are required for the code snippet to function properly?
+What external dependencies are required for the code snippet to execute successfully?
+What input data dependencies are required for the code snippet to execute correctly?
+Which components or modules in the program have dependencies on the behavior of the code snippet <CodeSnippet>?
+What components would be affected or fail if the specified code snippet were modified or removed?
+What downstream computations or processes depend on the result or side effects of the code snippet?
+What is the relationship between the code snippet and its enclosing function or method?
+How does the provided code snippet interact with class attributes and instance variables?
+What is the relationship between the code snippet and the error-handling logic within the same code block?
+What other parts of the codebase depend on or interact with the logic in <CodeSnippet>?
+How does a change in the code snippet affect the correctness of its enclosing function?
+What are the potential risks of modifying code without understanding its dependencies?
+In which specific parts of <Class> does it depend on <HelperClass> for its core functionality?

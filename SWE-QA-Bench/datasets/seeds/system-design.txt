@@ -1,0 +1,50 @@
+What are the recommended strategies for modularizing <Module> to reduce cognitive complexity for developers?
+How to implement consistent layering or architectural conventions within a specific module?
+How can duplicate code blocks in a module be replaced using a strategy-based design pattern?
+What are the standard practices for renaming member variables in a class to enhance code clarity?
+What are the steps to refactor a function into two sub-functions for improved readability and maintainability?
+What are the systematic approaches to identify and extract responsibility-specific code blocks from a function into smaller helper functions?
+What are the best practices for splitting a function into multiple functions to improve code readability?
+How to refactor a function to isolate logic and adhere to the Single Responsibility Principle?
+What are effective techniques to decouple a specific function to enhance modularity and performance?
+What design patterns are implemented in the <Module> module and how are they structured?
+What design patterns does <Module> implement for state management, dependency injection, and control flow?
+What fault-tolerance or retry strategy does <Module> implement for external calls?
+What design patterns are implemented in the <Class> class and how are they applied?
+What implementation patterns are used in <Class> to support extensibility or reusability?
+What mechanisms ensure data consistency in <Module>?
+What mechanisms are implemented in <Module> to ensure control recovery after partial failure?
+What design patterns (e.g., Command, Strategy) are implemented in <Class> to separate control logic from data handling?
+How can refactoring separate data computation from control branching in a function?
+What specific abstractions or helper methods are used to isolate side effects in <Function>?
+What are effective techniques for separating responsibilities from a class to enhance cohesion and maintainability?
+How to extract responsibility from function into a dedicated handler in system design?
+How to refactor a function to separate BehaviorA and BehaviorB for clearer single responsibility?
+How to extract validation logic from a function and move it to a dedicated validator class?
+How can the <Module> be redesigned to eliminate cross-cutting concerns in <Component>?
+How to decouple a function from its dependency to enable mocking and unit testing?
+How to implement delegation of a specific operation in a component using the strategy or command pattern?
+How to extract communication logic from a service into an adapter or gateway layer in a system design?
+How to modify a process to enable a specific feature while avoiding a particular operation?
+How to modify a process to enforce a new validation rule during workflow execution?
+How to refactor a process to integrate external service calls under specific conditions?
+How to implement multi-tenant isolation in <Process> for <Scenario>?
+How to implement metrics and traces emission for observability in <Feature>?
+How to implement graceful fallback mechanisms for <Process> when <ServiceFailure> occurs in <Scenario>?
+How to refactor a feature to decouple side effect logic from core behavior?
+What are the best practices for implementing dynamic feature flag rollouts with safety mechanisms?
+How to implement <Feature> while maintaining <Function> in <Scenario>?
+What are the strategies for integrating a database into a component while avoiding schema migration downtime?
+What is the process for integrating a cache layer into a module to improve the performance of a specific feature?
+How to integrate a queue into a component to handle asynchronous processes in a specific scenario?
+How to integrate monitoring agents into a module to achieve real-time observability?
+How to implement security checks in a component to validate input at the boundary?
+How is <Feature> communication implemented during <Scenario>?
+How do getter and setter functions coordinate to enforce invariants in a class?
+How is the lifecycle of <Component> managed in the system design?
+What is the implementation approach for <Feature> in this system?
+What is the primary implementation method for <Feature> in this architecture?
+What are the design considerations for integrating <Feature> into this system?
+What mechanisms are implemented to realize <Feature> in the overall system design?
+What data validation or cleansing strategy is implemented in <Component>?
+What design patterns are used to separate control responsibilities from data operations in <Component>?

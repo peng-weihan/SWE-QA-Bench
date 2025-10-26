@@ -1,0 +1,112 @@
+Where is the parent class of `<Class>` defined and how is its variable declared?
+Where can I find examples of `<Function>` usage and its typical implementation patterns in this codebase?
+How to identify all classes defined within the <Module> module?
+What specific functions are defined in the <Module> module?
+How to identify all variables declared in the <Module> module?
+What methods are defined in the <Class> class?
+What functions are defined in the <Class> class?
+What are the member variables defined in the <Class> class?
+Where can I find the variables associated with the <Function> function?
+Based on the function name <Function>, what can be inferred about its purpose or implementation?
+Which modules or functions directly instantiate or reference the <Class> class?
+Where in the codebase are there dependencies on the <Class> class interface that would require updates if it changes?
+Which classes or objects are instantiated or invoked within the <Function> function?
+Which functions or methods invoke the <Function> function?
+Which modules or classes directly call the <Function> function?
+Which command-line tools or scripts use the <Function> function?
+Where are the configuration settings located in the <Module> module?
+Where are the configuration settings located within the <Function> function?
+Where are the configuration settings located within the <Class> class?
+Where can the main configuration file for the application be located?
+Where are database connection settings typically located in a codebase?
+Where can I modify connection pool parameters in the codebase?
+Where can I modify the logging levels for specific packages or modules in a codebase?
+Where are the log output format and appender configurations (such as console and file) located in the codebase?
+Where can I find the metrics and monitoring configuration files for this application?
+Where are the external service endpoints configured in the codebase?
+Where is the bootstrap or loader logic that initializes the dependent module <Module> located in the codebase?
+Where can I locate the dependency information for <Module> in build or manifest files?
+How to identify all modules that import or reference a specific module in the codebase?
+Where can I find the registration code for <Module>'s plugin or extension points that are used by other modules?
+Where is the dependency graph for <Module> defined in the project configuration?
+Where can I find the code that initializes and integrates <Module> into the application startup process?
+Where is the conditional logic that enables or disables <Module> at runtime located in the codebase?
+How to identify all classes that instantiate or extend a specific class in a codebase?
+Where in the codebase does the <Class> class reference utility or helper classes?
+Where are the factory or builder classes for <Class> declared and used in the codebase?
+Where can I locate the adapter or decorator class that wraps <Class>?
+Where can I find the declaration or documentation of the inheritance hierarchy for <Class>?
+Where in the codebase does <Class> register itself with the dependency-injection container or service locator?
+How to identify all plugin subclasses of <Class> in the codebase?
+Where is the core logic or algorithm of the <Function> function located in the codebase?
+Where in the codebase is the function <Function> called by other functions or controllers?
+How to locate all callers of a specific function within the entire code repository?
+Where can I find the callback or hook that <Function> uses to extend its behavior?
+Where can I find the import statements or dependencies for shared utility functions used by <Function>?
+Where are the unit tests or mocks for function <Function> located, and how do they indicate its dependencies?
+Where is the core logic for implementing the functionality located within the <Module> module?
+What are the key classes or methods in <Module> that implement this functionality?
+Where is the core logic for implementing this feature located within the <Class> class?
+Where in <Class> are the algorithms or state changes for this feature implemented?
+Where can I locate the core algorithm implementation of the <Function> function?
+Where is the catch block or error handler for function <Function> located in the codebase?
+Where in the codebase are errors raised by <Function> logged or handled for recovery?
+Where is the error handling code for the <Function> function located?
+Where can I find the authentication and authorization logic in the codebase?
+Where can I find the code responsible for loading configuration files during startup?
+Where can I find the database connection logic in the codebase?
+Where can I find the definition of the <Module> identifier in the codebase?
+Where is the implementation of the <Module> module located in the codebase?
+How can I locate the <Module> module within the codebase structure?
+Where is the <Module> module defined in the codebase?
+Where can I locate the definition of the <Module> module and its attributes in the codebase?
+Where is the implementation of the <Class> class located in the codebase?
+Where is the <Class> class defined in the codebase?
+Where is the definition of the <Class> class and its attributes located in the codebase?
+Where is the <Class> class defined in the codebase?
+Where is the <Function> function defined in the codebase?
+Where is the implementation of the <Function> function located in the codebase?
+Where can I locate the <Function> function and what are its parameters?
+Where is the <Function> function defined in the codebase?
+What specific functions or methods are called within the provided code snippet?
+What classes or objects are referenced in this code snippet?
+Where can the dependency declarations between ModuleA and ModuleB be located in the codebase?
+Where in the codebase can I find references or invocations of <ModuleB> by <ModuleA>?
+Where can I find the composition code that binds ClassA to ClassB?
+Where can I find the code responsible for injecting <DependencyClass> into <ConsumerClass>?
+Where is the <parameter> parameter handled and validated or transformed in the <Function> function?
+Where can I locate the code where <ModuleA> delegates work to <ClassB>?
+Where is the integration code that connects FunctionA to ModuleB located?
+Where can I locate the orchestration layer that coordinates between <ClassA> and <ClassB>?
+Where can I find the configuration or annotation that binds ClassA to ModuleA?
+Where in the API layer does FunctionA map HTTP requests to ClassB methods?
+Where is the connection point between <ModuleA> and <ModuleB> through the event bus or message broker?
+How to locate the chain of responsibility involving FunctionA, ClassB, and ModuleC?
+Where can I find the event handler registration code that connects FunctionA to ClassB?
+Where is the retry/fallback logic for <FunctionA> → <ModuleB> located in the codebase?
+How to identify which code calls or orchestrates <Functionality>?
+Where is the core entry point for the <Feature> feature located in the codebase?
+How can I identify and locate the main class or method responsible for launching <Feature>?
+What are the specific classes or files that implement the core functionality of <Feature>?
+How can I locate the source files in <Module> that define the <feature> functionality?
+Where can I find the code implementation for <feature> in <Module>?
+In which part of the code does the <function> function process the <parameter> parameter?
+Where in the function <function> is the parameter <parameter> validated or transformed?
+Where is the core algorithm for implementing <Feature> located in the codebase?
+Where in the repository can I find the code implementing the algorithmic steps for <Feature>?
+Where can I find the code that implements the <logic> functionality in the repository?
+Where can I locate the entry point that initiates <logic> processing?
+Where is the implementation of the <System> checks that raises <Error> located?
+Where in the codebase is the check that triggers and throws <Error> located?
+Where in the code snippet is the <Error> identifier generated when an error occurs?
+Where in the exception-handling code path is the <Error> class instantiated?
+How can I locate the source code that throws <Error> under specific conditions?
+Where is the code that generates the error message with the incorrect hint about <Issue>?
+Where is the implementation of the <Warning> component located in the codebase?
+Where is the logic that determines the assignment of <Variable> located in the codebase?
+Where is the definition or documentation for the <Variable> variable located?
+Where is the assignment of the <Variable> variable located in the codebase?
+Where can I locate the code logic responsible for assigning values to <Variable>?
+Where in the codebase is the <Variable> variable modified?
+Where is the definition of the <Variable> variable located in the <Module> module?
+Where is the definition of the <Variable> variable located within the <Class> class?

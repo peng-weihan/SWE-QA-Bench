@@ -1,0 +1,54 @@
+What is the structure of the dataflow in the <Module>?
+Where are the key data entry and exit points located in the <Module>?
+Identify the primary data producers and consumers within the <Module>.
+What specific dataflow-level retry or buffering strategies are implemented in <Module>?
+How is the control flow structured within the <Module> component?
+What are the specific conditions that determine control state transitions in <Module>?
+What control flow mechanisms are used to handle failures in <Module>?
+How does incoming data influence control branch selection in <Module>?
+What specific control decisions determine the data routing mechanism in <Module>?
+How is the dataflow structured within the <Class>?
+What are the main control branches or decision points in <Class>?
+Which component of <Class> initiates external control flow mechanisms such as callbacks or events?
+Which classes provide input data to <Class> and which classes receive output data from it?
+Under what data conditions does control flow redirect within <Class>?
+Where in <Class> is the control logic that determines data output pathways located?
+What is the input-output dataflow pattern in function <Function>?
+What intermediate variables or transformations are present in <Function>'s data flow path?
+Identify which upstream functions call <Function> and describe the data payloads passed in these calls.
+What are the downstream effects of the data returned by <Function> on the system?
+What are the main data mutation steps in the function <Function>?
+What are the conditional branches in <Function> and what logic do they control?
+What conditions or statements cause early return or control redirection in <Function>?
+How to trace the call graph of <Function> during both normal and exceptional execution paths?
+What runtime conditions determine which control branches are executed in <Function>?
+How do parameter values influence control flow within a function?
+How do the control flow decisions within <Function> determine its return value?
+In which stage of the data transformation pipeline does the <Function> function operate?
+How does the <Class> class handle exceptions and manage error-handling flows in its implementation?
+Which test cases require revalidation following modifications to the <Class> class?
+What database queries or API calls are executed during the execution of the <Function> function?
+Where are the return values of the <Function> function used in the system?
+What are the specific stages and data flow steps involved in implementing <Feature> from input to output?
+How does data transformation occur within the <Component>?
+What are the specific stages of data processing within <Component> before it produces the final output?
+What is the data propagation path between ModuleA and ModuleB?
+What are the intermediate components in the dataflow between <ComponentA> and <ComponentB>?
+What specific data transformations occur during the data flow between ModuleA and ModuleB?
+What are the abstraction layers that mediate dataflow between <Component> and the database?
+How does <Component> handle invalid or missing data in its dataflow?
+What are the main control flow branches in <Component> and what conditions trigger each branch?
+What is the sequence of operations that <Component> executes when processing a request?
+How does control propagate from <ModuleA> to <ModuleB>?
+What components coordinate to determine the execution flow in <Feature>?
+How does <Class> direct the control flow for <Feature>?
+What specific data conditions trigger control transitions in <Component>?
+What are the different output data variations produced by <Component> across its various control paths?
+How does data flow between the <Function> function and the <OtherFunction> function?
+How does the provided code snippet interact with preceding and succeeding lines in terms of control flow?
+How does the code snippet relate to the current loop, branch, or try block in terms of data flow and control flow?
+At which point in the startup sequence does <ModuleA> call <FunctionA>?
+In which part of <ClassA> is data passed into <FunctionB> and how are its results processed?
+Where is the caching layer located in the data flow between FunctionA and FunctionB?
+In which specific code path of <function> does the branching occur based on <parameter>?
+At which point in the data flow is <Variable>'s value computed?

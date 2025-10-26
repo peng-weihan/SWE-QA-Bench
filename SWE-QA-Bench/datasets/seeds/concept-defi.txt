@@ -1,0 +1,9 @@
+What are the input and output data fields processed by <Class>?
+What are the expected input parameters and return values of the <Function> function, and how does it handle nested compound models?
+What is the expected state or outcome after the <Function> function executes?
+What are the side effects introduced by the <Function> function?
+What is the semantic meaning of each argument in the <Function> function?
+What is the meaning and interpretation of the return value from the <Function> function?
+What is the return value of the <Function> function and what does it represent?
+What are the potential consequences of modifying the return value of the <Function> function?
+What is the meaning or purpose of the <Variable> variable in the <Function> function?

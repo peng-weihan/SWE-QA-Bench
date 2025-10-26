@@ -1,0 +1,9 @@
+Which functions are conditionally invoked by <Function>?
+Where is the database migration tool configuration located?
+Where can I find the lower-level helper functions that <Function> delegates to?
+Where is the authorization policy applied before each request in the codebase?
+Where in the system are security checks and permission validations implemented?
+Which functions or methods contain the code <CodeSnippet> or call it indirectly?
+Where can I locate the code responsible for implementing <Functionality> in this codebase?
+Where is the main loop or recursion for <Feature> implemented in the codebase?
+Where in the codebase are the rules or conditions for <logic> evaluated?

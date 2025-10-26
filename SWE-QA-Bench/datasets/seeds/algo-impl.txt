@@ -1,0 +1,72 @@
+How to defer non-critical operations or implement caching to simplify module logic?
+What are specific techniques to optimize the data structure implementation of <Class> for reducing time or space complexity?
+What are specific techniques to refactor function <Function> for improved readability, maintainability, and error handling?
+What are the best practices for restructuring function <Function> to enhance logical clarity and error handling?
+How to refactor a function to reduce complexity and eliminate deeply nested logic?
+How to refactor nested conditions and loops in a function to improve code readability and maintainability?
+How to use break, continue, and early return statements to simplify control flow in a function?
+How to remove code duplication in a function by introducing reusable functions?
+What are the steps to extract a code segment from a function into a separate utility function?
+What are the techniques for extracting common logic from multiple conditional branches in a function to improve code maintainability?
+How to remove inline code duplication in a function using parameterized utility methods?
+How to identify and remove redundant parameters in a function definition?
+How is the `<Method>` implemented and utilized within the `<Class>`?
+How is the `<Function>` function implemented and what functionality does it provide in this codebase?
+How is the `<Module>` class implemented in the codebase?
+How do static and instance functions coordinate to implement class-level logic in object-oriented programming?
+How does <Function> process and handle its input parameters?
+How does the <Function> construct its return value in terms of implementation logic and data processing?
+How does <Function> handle multiple conditions in its implementation?
+How do constructor and initializer functions coordinate to set up class state in object-oriented programming?
+How does <Function> validate or sanitize its <Parameter> parameters?
+How does <Function> process multiple <Parameter>s to maintain consistency?
+What input validation and sanitization strategies are implemented in <Function>?
+What are the specific impacts of modifying the initialization logic of the <Class> class on its consumers?
+How do helper functions or inner functions contribute to the logic of a function?
+How to rename a variable to maintain consistency within a function?
+How to eliminate duplicate <Operation> code in the <Function> function?
+How to extract a helper function from an existing function to isolate and reuse specific logic?
+What are the best practices for renaming variables in functions to improve code clarity?
+How to refactor variable usage to improve code safety?
+How to refactor <FunctionA> and <FunctionB> into a single function to eliminate code duplication?
+How to modify <Parameter> in <Scenario> to resolve <Error>?
+How to modify <Feature> to handle <Situation> with <Variable>?
+What are the specific code modifications needed to add <Feature> support to <File>?
+How to modify the implementation of <Algorithm> in <Function> to properly handle <Condition>?
+How to replace a specific variable in a file and add missing arguments to a module?
+How to implement logging of <DebugInfo> in <Feature> for troubleshooting in <Scenario>?
+How to implement <Process> for concurrent execution while satisfying <ConcurrencyConstraint>?
+How to implement dynamic toggling of <Feature> based on <ConfigurationFlag> values?
+How to implement file handling with input data sanitization to prevent injection attacks?
+How to implement the <Algorithm> update using <NewLibrary> to achieve improved accuracy?
+What are the steps to modify the <Process> algorithm to backfill <HistoricalData> during <Migration>?
+What is the implementation approach for adding <Feature> to track <Behavior> during <Scenario>?
+How is <Feature> implemented in <Module>?
+What is the implementation approach for <Feature> in <Module>?
+What is the implementation approach for <Feature> using <Tech>?
+What is the implementation approach for <Feature> to optimize <Process> in <Scenario>?
+How is <Feature> implemented for <Component> in this codebase?
+How does <Function> handle <Exception> when it occurs?
+How does <Feature> handle <Condition> in <Scenario>?
+How does <Component> handle <Specific Condition> in <Scenario>?
+How do asynchronous functions in a module coordinate to complete a feature workflow?
+How do callback-based functions coordinate to handle events in a specific scenario?
+How does <Function> invoke <HelperFunction> and process its returned results when implementing <Feature>?
+How do multiple functions within a class coordinate to implement a specific feature?
+How is <Variable> initialized and validated within the <Function> implementation?
+How are default values assigned to variables in a function?
+How is <Variable> sanitized or transformed before being passed to <Function>?
+How is <Condition> evaluated and handled within the implementation of <Function>?
+How does <Function> handle edge-case <Condition>s without throwing errors?
+How does <Function> implement guard clauses to simplify conditional logic?
+How does <Function> handle prioritization when multiple <Condition>s occur simultaneously in <Module>?
+How does <Function> process <Parameter> in <Scenario>?
+How does <Component> handle <Condition> in <Scenario>?
+How is <Operation> implemented by <Component> in the context of <Scenario>?
+How does <File> implement <Process> during <Scenario> when handling <Feature>?
+How does <Function> handle <Condition> in <Module>?
+How does the <Function> in <File> process and manage the <Variable>?
+How does <Component> handle runtime exceptions through fallback strategies?
+What specific test cases are designed to validate the behavior and functionality of the provided code snippet?
+How does the provided code snippet contribute to the function's return value or output?
+What specific errors or unexpected behaviors might occur if the code snippet contains a logic bug?

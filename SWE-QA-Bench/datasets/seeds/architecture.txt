@@ -1,0 +1,20 @@
+What are the recommended architectural patterns to improve the internal structure of a module for better testability and modularity?
+What is the architectural structure of the <Module> in this system?
+What is the layered structure of the <Module> component?
+What are the core layers and their respective responsibilities in the <Module> architecture?
+What architectural style (e.g., hexagonal, layered) is used in the <Module>?
+What are the subsystems that constitute the <Module> and how do they interact with each other?
+What architectural abstractions are used to decouple dataflow and controlflow in <Module>?
+What are the primary data roles (source, transform, or sink) of <Class> in the system architecture?
+What data integrity mechanisms are implemented in the <Class> class?
+What control responsibilities are defined and managed by <Class>?
+What role does the <Module> module serve in the overall system architecture?
+In which architectural layer (e.g., business, utility, controller) is the <Function> function implemented?
+What is the role of the <Class> class in a layered or modular architecture?
+What is the architectural structure and organization of the <Component> in this system?
+What architectural trade-offs are involved when integrating <Feature>?
+What are the abstraction layers that isolate <Feature> logic from the rest of the system?
+What specific technologies enable the scalability of <Component>?
+What architectural patterns and technologies enable <Component> to scale effectively with increasing user load?
+What architectural strategies are used to ensure <Component> can handle peak traffic loads?
+What observability and telemetry tools are used to monitor <Component>'s behavior in the system architecture?

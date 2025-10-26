@@ -1,0 +1,11 @@
+How to refactor a function to optimize its performance?
+How does a performance regression in the <Function> function affect user experience?
+What are the specific factors that cause <Module> to fail in scaling efficiently under high-concurrency conditions?
+What are the specific memory and performance impacts of repeatedly instantiating a class?
+Why is method invocation in <Class> slower than expected under production workloads?
+Why does the performance of <Function> degrade after code refactoring?
+How to refactor the provided code snippet to optimize its performance?
+What are effective strategies for optimizing <Process> to achieve <PerformanceRequirement> while maintaining functional correctness?
+How to implement a <Metrics> collection feature in <Component> while maintaining throughput performance?
+What caching or batching mechanisms can be implemented to enhance <Component>'s performance under high load conditions?
+What specific performance impacts can be caused by inefficient operations in the code snippet?

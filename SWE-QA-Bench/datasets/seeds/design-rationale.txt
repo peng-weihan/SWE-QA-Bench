@@ -1,0 +1,14 @@
+What are the design principles and considerations behind the `<Class>` implementation?
+What specific SOLID or other common design principles are implemented in <Module>?
+What design principles (e.g., SOLID) are implemented in <Class>?
+What was the design motivation for introducing the <Module> module?
+What are the known limitations or constraints of the <Class> class in terms of its design and implementation?
+What specific issue or challenge led to the creation of the <Function> function?
+What specific condition or requirement is the <Function> function designed to satisfy?
+What implementation expectations are implied by the name of the <Function> function?
+What design intent is reflected in the naming of the <Function> function?
+What design constraints or assumptions are considered in the <Class> class's implementation?
+What is the design rationale behind organizing module <Module> with multiple classes?
+Why does the <Function> function select the current algorithm?
+What is the design rationale for including <Class> in <Module>?
+What is the design rationale for placing <Function> within <Class>?

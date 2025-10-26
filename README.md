@@ -27,7 +27,8 @@ SWE-QA-Bench/
 │   │   │   ├── astropy.jsonl  # Project-specific datasets
 │   │   │   ├── django.jsonl
 │   │   │   ...
-│   │   ├── answers/           # Answer datasets
+│   │   ├── reference/         # Reference Answer(Benchmark)
+│   │   ├── seeds/             # Seed questions in 12 taxonomies
 │   │   ├── faiss/             # FAISS index files
 │   │   └── repos/             # Repository data
 │   ├── issue_analyzer/        # GitHub issue analysis
