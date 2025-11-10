@@ -1,7 +1,7 @@
 # SWE-QA
 
 **SWE-QA: Can Language Models Answer Repository-level Code Questions?**
-This repository contains code and data for the SWE-QA benchmark, which evaluates language models' ability to answer repository-level code questions across 12 popular Python projects including Django, Flask, Requests, and more.
+This repository contains code and data for the SWE-QA benchmark, covering the original SWE-QA v1 release (12 popular Python projects such as Django, Flask, Requests, and more) together with the complementary SWE-QA v2 benchmarks that add `conan`, `streamlink`, and `reflex` to reduce data leakage.
 
 ## 📝 Prompts
 
@@ -11,6 +11,10 @@ The detailed prompt templates used in the paper are in the `supplementary.pdf` f
 
 The benchmark dataset is available on Hugging Face:
 - **Dataset**: [SWE-QA-Benchmark](https://huggingface.co/datasets/swe-qa/SWE-QA-Benchmark)
+
+### Latest Update (2025.11.10)
+
+To complement the original SWE-QA v1 release and mitigate data leakage observed across its 12 repositories, we shipped the SWE-QA v2 benchmarks on 2025.11.10. The additional JSONL files (`conan.jsonl`, `streamlink.jsonl`, `reflex.jsonl`) extend the benchmark with improved coverage and reduced leakage risk, and we plan to distribute them alongside future dataset updates.
 
 ## 📖 Paper
 
