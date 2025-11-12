@@ -10,7 +10,7 @@ The detailed prompt templates used in the paper are in the `supplementary.pdf` f
 ## 📊 Dataset
 
 The benchmark dataset is available on Hugging Face:
-- **Dataset**: [SWE-QA-Benchmark](https://huggingface.co/datasets/swe-qa/SWE-QA-Benchmark)
+- **Dataset**: [SWE-QA-Benchmark](https://huggingface.co/datasets/Raymone023/SWE-QA-Benchmark)
 
 ### Latest Update (2025.11.10)
 
@@ -25,7 +25,7 @@ For more details about the methodology and results, please refer to the paper:
 
 ```
 SWE-QA-Bench/
-├── SWE-QA-Bench/                    # Main package directory
+├── SWE-QA-Bench/              # Main package directory
 │   ├── datasets/              # Dataset files and repositories
 │   │   ├── questions/         # Question datasets (JSONL format)
 │   │   │   ├── astropy.jsonl  # Project-specific datasets
