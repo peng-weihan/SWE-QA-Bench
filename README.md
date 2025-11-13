@@ -65,14 +65,19 @@ SWE-QA-Bench/
 ### Prerequisites
 
 - Python 3.12
-- pip or conda for package management
+- uv package management
 - OpenAI API access (required for all evaluation methods)
 - Voyage AI API access (required for RAG-based methods)
 
 ### Installation
 **Install dependencies:**
    ```bash
-   pip install -r requirements.txt
+   uv sync
+   ```
+
+If you want to run evaluation methods
+   ```
+   uv sync --extra baseline
    ```
    
 **SWE Repository Prerequisites:**
@@ -170,7 +175,7 @@ METHOD= # choose from [direct, func_chunk, sliding_window]
 Evaluate generated answers using LLM-as-a-judge:
 ```bash
 cd SWE-QA-Bench/score
-python llm-score.py
+python main.py
 ```
 
 ## 📄 License
