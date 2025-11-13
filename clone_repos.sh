@@ -4,7 +4,7 @@
 REPO_FILE="./repos.txt"
 
 # Directory to store the repositories
-TARGET_DIR="./SWE-QA/datasets/repos"
+TARGET_DIR="./SWE-QA-Bench/datasets/repos"
 
 mkdir -p "$TARGET_DIR"
 
