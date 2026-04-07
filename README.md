@@ -1,63 +1,77 @@
 # SWE-QA
 
-**SWE-QA: Can Language Models Answer Repository-level Code Questions?**
-This repository contains code and data for the SWE-QA benchmark, covering the original SWE-QA v1 release (12 popular Python projects such as Django, Flask, Requests, and more) together with the complementary SWE-QA v2 benchmarks that add `conan`, `streamlink`, and `reflex` to reduce data leakage.
+**SWE-QA** is a benchmark for **repository-level code question answering**. This repository hosts the benchmark **data** (question–answer pairs tied to pinned commits) and **code** to construct the benchmark, clone evaluation repositories, and run baselines and agents.
 
-## 📝 Prompts
+It covers the original **SWE-QA v1** release (12 popular Python projects such as `Django` and `Flask`) together with the complementary **SWE-QA v2** that adds `conan`, `streamlink`, and `reflex`.
 
-The detailed prompt templates used in the paper are in the `supplementary.pdf` file
+👏Our paper "SWE-QA: Can Language Models Answer Repository-level Code Questions?" has been accepted to **ACL 2026 Findings**.
 
-## 📊 Dataset
+If you use SWE-QA in your work, please cite:
 
-The benchmark dataset is available on Hugging Face:
-- **Dataset**: [SWE-QA-Benchmark](https://huggingface.co/datasets/Raymone023/SWE-QA-Benchmark)
-
-### Latest Update (2025.11.10)
-
-To complement the original SWE-QA v1 release and mitigate data leakage observed across its 12 repositories, we shipped the SWE-QA v2 benchmarks on 2025.11.10. The additional JSONL files (`conan.jsonl`, `streamlink.jsonl`, `reflex.jsonl`) extend the benchmark with improved coverage and reduced leakage risk, and we plan to distribute them alongside future dataset updates.
+```bibtex
+@article{peng2025swe,
+  title={Swe-qa: Can language models answer repository-level code questions?},
+  author={Peng, Weihan and Shi, Yuling and Wang, Yuhang and Zhang, Xinyun and Shen, Beijun and Gu, Xiaodong},
+  journal={arXiv preprint arXiv:2509.14635},
+  year={2025}
+}
+```
 
 ## 📖 Paper
 
 For more details about the methodology and results, please refer to the paper:
-- **Paper**: "SWE-QA: Can Language Models Answer Repository-level Code Questions?"
+- **Paper**: "SWE-QA: Can Language Models Answer Repository-level Code Questions?"【[arxiv](https://arxiv.org/abs/2509.14635)】
+
+## 📊 Dataset
+
+The benchmark dataset is available on Hugging Face:
+- **Dataset**: [SWE-QA](https://huggingface.co/datasets/swe-qa/SWE-QA-Benchmark)
+
+### Benchmark Construction Workflow
+
+The following diagram illustrates the workflow for constructing the SWE-QA benchmark:
+
+![Benchmark Construction Workflow](assets/workflow.png)
+
+### Benchmark Example
+
+The following example shows the structure and format of questions in the benchmark:
+
+![Benchmark Example](assets/example.png)
+
 
 ## 📁 Repository Structure
 
 ```
-SWE-QA-Bench/
-├── SWE-QA-Bench/              # Main package directory
-│   ├── datasets/              # Dataset files and repositories
-│   │   ├── questions/         # Question datasets (JSONL format)
-│   │   │   ├── astropy.jsonl  # Project-specific datasets
-│   │   │   ├── django.jsonl
-│   │   │   ...
-│   │   ├── reference/         # Reference Answer(Benchmark)
-│   │   ├── seeds/             # Seed questions in 12 taxonomies
-│   │   ├── faiss/             # FAISS index files
-│   │   └── repos/             # Repository data
-│   ├── issue_analyzer/        # GitHub issue analysis
-│   │   ├── get_question_from_issue.py
-│   │   └── pull_issues.py
-│   ├── methods/               # Evaluation methods
-│   │   ├── llm_direct/        # Direct LLM evaluation
-│   │   ├── rag_function_chunk/ # RAG with function chunking
-│   │   ├── rag_sliding_window/ # RAG with sliding window
-│   │   ├── code_formatting.py
-│   │   └── data_models.py
-│   ├── score/                 # Scoring utilities
-│   │   └── llm-score.py       # LLM-as-a-judge evaluation
-│   ├── models/                # Data models
-│   │   └── data_models.py
-│   └── utils/                 # Utility functions
-├── docs/                      # Documentation of each part
-│   └── README.md
-├── LICENSE                    # License file
-├── supplementary.pdf          # Supplementary file (prompts)
-├── clone_repos.sh             # Script to clone repositories at specific commits
-├── repos.txt                  # List of repository URLs and commit hashes
-├── requirements.txt           # Python dependencies required to run the project
-└── README.md                  # This file
+SWE-QA-Bench/                    # Repository root
+├── Benchmark/                 # Released benchmark (JSONL per project)
+│   ├── *.jsonl                # e.g. astropy.jsonl, django.jsonl, ...
+├── Benchmark construction/    # Build and score the benchmark
+│   ├── issue_analyzer/        # GitHub issue to question drafts
+│   ├── qa_generator/
+│   ├── repo_parser/
+│   ├── score/                 # e.g. llm-as-a-judge.py
+│   └── models/
+├── Experiment/
+│   ├── ErrorAnalysis/         # e.g. error_analysis.jsonl
+│   └── Script/                # Eval methods and agent runners
+│       ├── llm_direct/
+│       ├── rag_function_chunk/
+│       ├── rag_sliding_window/
+│       ├── SWE-agent_QA/
+│       ├── OpenHands_QA/
+│       └── Cursor-Agent_QA/
+├── assets/                    # README figures
+├── clone_repos.sh
+├── repo_commit.txt            # URLs + commits for clone_repos.sh
+├── pyproject.toml             # Dependencies (uv)
+├── uv.lock
+├── Dockerfile
+├── LICENSE
+└── README.md
 ```
+
+After running `./clone_repos.sh`, evaluated repositories are checked out under `datas/repos/` (not committed to git).
 
 
 ## 🚀 Environment Setup
@@ -90,7 +104,7 @@ If you want to run evaluation methods
 
 ### 1. Direct LLM Evaluation
 
-Before executing, you need to configure the environment variables by filling the `.env` file in the `SWE-QA-Bench/methods/llm_direct` directory:
+Before executing, you need to configure the environment variables by filling the `.env` file in the `Experiment/Script/llm_direct` directory:
 ```bash
 OPENAI_BASE_URL=your_openai_base_url
 OPENAI_API_KEY=your_api_key
@@ -99,7 +113,7 @@ MODEL=your_model_name
 
 Evaluate language models directly on repository-level questions:
 ```bash
-cd SWE-QA-Bench/methods/llm_direct
+cd Experiment/Script/llm_direct
 python main.py
 ```
 
@@ -110,7 +124,7 @@ This method will:
 - Save results to `datasets/answers/direct/`
 
 ### 2. RAG with Function Chunking
-Before executing, you need to configure the environment variables by filling the `.env` file in the `SWE-QA-Bench/methods/rag_function_chunk` directory:
+Before executing, you need to configure the environment variables by filling the `.env` file in the `Experiment/Script/rag_function_chunk` directory:
 ```bash
 # Voyage AI Configuration
 VOYAGE_API_KEY=
@@ -125,7 +139,7 @@ MODEL=
 Use RAG with function-level code chunking:
 
 ```bash
-cd SWE-QA-Bench/methods/rag_function_chunk
+cd Experiment/Script/rag_function_chunk
 python main.py
 ```
 
@@ -137,7 +151,7 @@ This method will:
 
 ### 3. RAG with Sliding Window
 
-Before executing, you need to configure the environment variables by filling the `.env` file in the `SWE-QA-Bench/methods/rag_sliding_window` directory:
+Before executing, you need to configure the environment variables by filling the `.env` file in the `Experiment/Script/rag_sliding_window` directory:
 ```bash
 # Voyage AI Configuration
 VOYAGE_API_KEY=
@@ -152,7 +166,7 @@ MODEL=
 Use RAG with sliding window text chunking:
 
 ```bash
-cd SWE-QA-Bench/methods/rag_sliding_window
+cd Experiment/Script/rag_sliding_window
 python main.py
 ```
 
@@ -163,7 +177,7 @@ This method will:
 - Generate contextual answers
 
 ### 4. Evaluation and Scoring
-Before executing, you need to configure the environment variables by filling the `.env` file in the `SWE-QA-Bench/score` directory:
+Before executing, you need to configure the environment variables by filling the `.env` file in the `Benchmark construction/score` directory:
 ```bash
 OPENAI_BASE_URL=your_openai_base_url
 OPENAI_API_KEY=your_api_key
@@ -174,8 +188,8 @@ METHOD= # choose from [direct, func_chunk, sliding_window]
 
 Evaluate generated answers using LLM-as-a-judge:
 ```bash
-cd SWE-QA-Bench/score
-python main.py
+cd "Benchmark construction/score"
+python llm-as-a-judge.py
 ```
 
 ## 📄 License

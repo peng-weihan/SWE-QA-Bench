@@ -28,3 +28,6 @@ docs/
 # Other
 *.pdf
 
+# Local clone cache (clone_repos.sh writes here; exclude from build context)
+datas/
+

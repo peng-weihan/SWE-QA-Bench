@@ -1,0 +1,12 @@
+{
+  "repo_base_dir": "/path/to/repositories",
+  "question_dir": "/path/to/questions",
+  "output_dir": "/path/to/output",
+  "model": "auto",
+  "max_concurrency": 4,
+  "output_format": "json",
+  "max_tool_calls": 30,
+  "force": false,
+  "repo_list": []
+}
+

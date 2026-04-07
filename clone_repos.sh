@@ -1,15 +1,16 @@
 #!/bin/bash
 
 # File containing repository URLs and commit hashes, one per line: <url> <commit_hash>
-REPO_FILE="./repos.txt"
+REPO_FILE="./repo_commit.txt"
 
 # Directory to store the repositories
-TARGET_DIR="./SWE-QA-Bench/datasets/repos"
+TARGET_DIR="./datas/repos"
 
 mkdir -p "$TARGET_DIR"
 
 # Loop through each line in the file
 while read -r repo_url commit_hash; do
+    [ -z "$repo_url" ] || [ -z "$commit_hash" ] && continue
     # Extract the repository name from the URL
     repo_name=$(basename "$repo_url" .git)
     repo_path="$TARGET_DIR/$repo_name"
