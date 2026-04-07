@@ -25,7 +25,7 @@ For more details about the methodology and results, please refer to the paper:
 ## 📊 Dataset
 
 The benchmark dataset is available on Hugging Face:
-- **Dataset**: [SWE-QA](https://huggingface.co/datasets/swe-qa/SWE-QA-Benchmark)
+- **Dataset**: 【[hugging-face](https://huggingface.co/datasets/swe-qa/SWE-QA-Benchmark)】
 
 ### Benchmark Construction Workflow
 
@@ -194,3 +194,7 @@ python llm-as-a-judge.py
 
 ## 📄 License
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Related resources
+
+For a curated list of papers and resources on **repository-level code generation**, **issue resolution**, and related topics (including repo-level code QA), see [**Awesome Repository-Level Code Generation**](https://github.com/YerbaPage/Awesome-Repo-Level-Code-Generation) — a community-maintained survey-style list on GitHub.
