@@ -6,17 +6,6 @@ It covers the original **SWE-QA v1** release (12 popular Python projects such as
 
 👏Our paper "SWE-QA: Can Language Models Answer Repository-level Code Questions?" has been accepted to **ACL 2026 Findings**.
 
-If you use SWE-QA in your work, please cite:
-
-```bibtex
-@article{peng2025swe,
-  title={Swe-qa: Can language models answer repository-level code questions?},
-  author={Peng, Weihan and Shi, Yuling and Wang, Yuhang and Zhang, Xinyun and Shen, Beijun and Gu, Xiaodong},
-  journal={arXiv preprint arXiv:2509.14635},
-  year={2025}
-}
-```
-
 ## 📖 Paper
 
 For more details about the methodology and results, please refer to the paper:
@@ -99,102 +88,18 @@ If you want to run evaluation methods
    # Use the provided script to clone all repositories at specific commits
    ./clone_repos.sh
    ```
+## References
+If you use SWE-QA in your work, please cite:
 
-## ⚡ Quick Start
-
-### 1. Direct LLM Evaluation
-
-Before executing, you need to configure the environment variables by filling the `.env` file in the `Experiment/Script/llm_direct` directory:
-```bash
-OPENAI_BASE_URL=your_openai_base_url
-OPENAI_API_KEY=your_api_key
-MODEL=your_model_name
+```bibtex
+@article{peng2025swe,
+  title={Swe-qa: Can language models answer repository-level code questions?},
+  author={Peng, Weihan and Shi, Yuling and Wang, Yuhang and Zhang, Xinyun and Shen, Beijun and Gu, Xiaodong},
+  journal={arXiv preprint arXiv:2509.14635},
+  year={2025}
+}
 ```
-
-Evaluate language models directly on repository-level questions:
-```bash
-cd Experiment/Script/llm_direct
-python main.py
-```
-
-This method will:
-- Load questions from the dataset
-- Send questions directly to the LLM
-- Generate answers without additional context
-- Save results to `datasets/answers/direct/`
-
-### 2. RAG with Function Chunking
-Before executing, you need to configure the environment variables by filling the `.env` file in the `Experiment/Script/rag_function_chunk` directory:
-```bash
-# Voyage AI Configuration
-VOYAGE_API_KEY=
-VOYAGE_MODEL=  # voyage-code-3 recommended
-
-# OpenAI Configuration
-OPENAI_BASE_URL=
-OPENAI_API_KEY=
-MODEL=
-```
-
-Use RAG with function-level code chunking:
-
-```bash
-cd Experiment/Script/rag_function_chunk
-python main.py
-```
-
-This method will:
-- Parse code into function-level chunks
-- Build vector embeddings for code chunks
-- Retrieve relevant code context for each question
-- Generate answers using retrieved context
-
-### 3. RAG with Sliding Window
-
-Before executing, you need to configure the environment variables by filling the `.env` file in the `Experiment/Script/rag_sliding_window` directory:
-```bash
-# Voyage AI Configuration
-VOYAGE_API_KEY=
-VOYAGE_MODEL=   # voyage-code-3 recommended
-
-# OpenAI Configuration
-OPENAI_URL=
-OPENAI_KEY=
-MODEL=
-```
-
-Use RAG with sliding window text chunking:
-
-```bash
-cd Experiment/Script/rag_sliding_window
-python main.py
-```
-
-This method will:
-- Split code into overlapping text windows
-- Create embeddings for text chunks
-- Retrieve relevant chunks for each question
-- Generate contextual answers
-
-### 4. Evaluation and Scoring
-Before executing, you need to configure the environment variables by filling the `.env` file in the `Benchmark construction/score` directory:
-```bash
-OPENAI_BASE_URL=your_openai_base_url
-OPENAI_API_KEY=your_api_key
-MODEL=your_model_name
-
-METHOD= # choose from [direct, func_chunk, sliding_window]
-```
-
-Evaluate generated answers using LLM-as-a-judge:
-```bash
-cd "Benchmark construction/score"
-python llm-as-a-judge.py
-```
-
-## 📄 License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ## 🔗 Related resources
 
-For a curated list of papers and resources on **repository-level code generation**, **issue resolution**, and related topics (including repo-level code QA), see [**Awesome Repository-Level Code Generation**](https://github.com/YerbaPage/Awesome-Repo-Level-Code-Generation) — a community-maintained survey-style list on GitHub.
+For a curated list of papers and resources on **repository-level code generation**, **issue resolution**, and related topics (including repo-level code QA), see [**Awesome Repository-Level Code Generation**](https://github.com/YerbaPage/Awesome-Repo-Level-Code-Generation).
