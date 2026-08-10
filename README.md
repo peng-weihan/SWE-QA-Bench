@@ -92,11 +92,12 @@ If you want to run evaluation methods
 If you use SWE-QA in your work, please cite:
 
 ```bibtex
-@article{peng2025swe,
+@inproceedings{peng2026swe,
   title={Swe-qa: Can language models answer repository-level code questions?},
   author={Peng, Weihan and Shi, Yuling and Wang, Yuhang and Zhang, Xinyun and Shen, Beijun and Gu, Xiaodong},
-  journal={arXiv preprint arXiv:2509.14635},
-  year={2025}
+  booktitle={Findings of the Association for Computational Linguistics: ACL 2026},
+  pages={8230--8245},
+  year={2026}
 }
 ```
 
