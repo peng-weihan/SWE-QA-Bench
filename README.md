@@ -88,6 +88,15 @@ If you want to run evaluation methods
    # Use the provided script to clone all repositories at specific commits
    ./clone_repos.sh
    ```
+## Third-party reproductions
+
+| who | setup | questions | result | files |
+|---|---|---|---|---|
+| aoci-spec, Oct 2026 | OpenHands 1.1.0, 10 iterations, temperature 0, Claude Sonnet 4.5 judge ×5, GPT-5.1 | all 720, k=1 | 69.96 (Table 3: 70.79) | [aoci-sweqa-r5](https://github.com/aoci-spec/aoci-sweqa-r5) |
+| aoci-spec, Oct 2026 | same pipeline, DeepSeek V4.1-Flash: bare / +CodeGraph / +AOCI index | all 720, k=10 | 75.94 / 77.08 / 77.30 | same |
+
+Trajectories, answers and the five raw judge votes per answer are in the linked package.
+
 ## References
 If you use SWE-QA in your work, please cite:
 
